@@ -1,0 +1,311 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Block style */
+
+.container {
+    width: 70%;
+    margin: 0 auto;
+}
+
+.block {
+    min-height: 280px;
+    border-radius: 5px;
+    background-color: lightgray;
+    margin: 10px 0;
+    padding: 25px;
+    position: relative;
+}
+
+.edit-block, .style-block {
+    display: none;
+}
+
+/* Edit and style button */
+
+.center-block {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.btn-edit, .btn-style, .btn-add, .btn-save {
+    border: none;
+    border-radius: 4px;
+    width: 45px;
+    height: 30px;
+}
+
+.btn-edit {
+    background-color: yellow;
+    margin-right: 5px;
+}
+
+.btn-style {
+    background-color: blue;
+}
+
+.btn-edit:hover {
+    background-color: rgb(206, 206, 0);
+    box-shadow: 0 0 10px yellow;
+}
+
+.btn-style:hover {
+    background-color: rgb(0, 0, 192);
+    box-shadow: 0 0 10px blue;
+}
+
+/* Edit area style */
+
+.edit-area {
+    width: 100%;
+    height: 200px;
+    resize: none;
+}
+
+.btn-add {
+    background-color: red;
+    color: white;
+}
+
+.btn-save {
+    background-color: brown;
+    color: white;
+}
+
+.btn-add:hover {
+    background-color: rgb(228, 8, 8);
+    box-shadow: 0 0 10px red;
+}
+
+.btn-save:hover {
+    background-color: rgb(146, 38, 38);
+    box-shadow: 0 0 10px brown;
+}
+
+/* Style page `style` */
+
+.colors {
+    width: 150px;
+    height: 150px;
+    outline: 1px solid black;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.color-box {
+    width: 50px;
+    height: 50px;
+    border: 1px solid black;
+}
+
+.font-size, .font-family, .font-color {
+    margin-bottom: 5px;
+}
+
+.font-size span {
+    font-size: 14px;
+    margin-right: 10px;
+}
+
+.font-family {
+    width: 250px;
+}
+
+.btn-textColor {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: grey;
+    border-radius: 5px;
+}
+
+.btn-bgColor {
+    width: 150px;
+    height: 30px;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+}
+
+.btn-textColor:hover, .btn-bgColor:hover {
+    background-color: rgb(109, 107, 107);
+    box-shadow: 0 0 10px rgb(90, 89, 89);
+}
+
+.btn-textColor:focus, .btn-bgColor:focus {
+    background-color: rgb(109, 107, 107);
+    box-shadow: 0 0 10px rgb(90, 89, 89);
+}
+
+.check-bold-italic:focus {
+    box-shadow: 0 0 5px blue;
+}
+
+.form-style span {
+    margin: 0 5px;
+    font-size: 14px;
+}
+
+/* Table and list style */
+
+.list-or-table {
+    margin: 15px 0 15px;
+}
+
+.list-or-table span {
+    margin-right: 15px;
+}
+
+.table, .list {
+    margin-right: 5px;
+}
+
+.create-table div {
+    margin-bottom: 5px;
+}
+
+.btn-create-list, .btn-create-table {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: brown;
+    border-radius: 5px;
+    color: white;
+}
+
+.btn-create-list:hover, .btn-create-table:hover {
+    background-color: rgb(143, 36, 36);
+    box-shadow: 0 0 10px brown;
+}
+
+.table-style {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.table-style span {
+    margin-right: 10px;
+}
+
+#table-color-border {
+    margin-right: 0;
+}
+
+.table-style select {
+    width: 130px;
+    margin-right: 15px;
+}
+
+.table-style input {
+    width: 130px;
+    margin-right: 15px;
+}
+
+.count-tr, .count-td, .width-td, .height-td, .count-li, .type-li {
+    position: absolute;
+    width: 75%;
+    right: 25px;
+    margin-bottom: 5px;
+}
+
+/* Special classes */
+
+input[type=text]:focus-visible{
+    outline: none;
+    box-shadow: 0 0 5px blue;
+}
+
+select:focus-visible{
+    outline: none;
+    box-shadow: 0 0 5px blue;
+}
+
+.first, .second {
+    display: none;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.bold {
+    font-weight: bold;
+}
+
+.hide {
+    display: none;
+}
+
+.show {
+    display: block;
+}
+
+/* POPUP Style */
+
+.popup {
+    position: fixed;
+    width: 500px;
+    height: 70px;
+    background-color: rgb(209, 198, 198);
+    top: 20%;
+    left: 30%;
+    border-radius: 10px;
+    box-shadow: 5px 5px 5px rgba(169, 142, 142, 0.727);
+    opacity: 0;
+    visibility: hidden;
+    overflow-y: auto;
+    overflow-x: hidden;
+    transition: all 0.8s ease 0s;
+}
+
+.popup.open {
+    opacity: 1;
+    visibility: visible;
+}
+
+.popup.open .popup__content {
+    transform: perspective(600px) translate(0px, 0%) rotateX(0deg);
+    opacity: 1;
+}
+
+.popup__body {
+    min-height: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.popup__content {
+    color: brown;
+    font-size: 18px;
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+
+.popup__close {
+    position: absolute;
+    right: 14px;
+    font-size: 14px;
+    text-decoration: none;
+    color: rgb(70, 69, 69);
+    font-family: monospace;
+}
+
+.popup__title {
+    font-weight: bolder;
+    font-size: 22px;
+    line-height: 26px;
+}
+
+.popup__text {
+    font-style: italic;
+}
